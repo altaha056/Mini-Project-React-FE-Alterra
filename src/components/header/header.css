@@ -1,0 +1,38 @@
+.header {
+  width: 90%;
+  background-color: #122132;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: end;
+  padding: 10pt;
+}
+
+.header-title {
+  padding: 10pt;
+  font-style: italic;
+  font-weight: 600;
+  background-color: #122132;
+  font-size: 16pt;
+  padding-left: 50pt;
+  color: white;
+}
+
+.header a {
+  font-size: 14pt;
+  padding: 20pt;
+}
+
+.header-login {
+  width: 10%;
+  font-size: 14pt;
+  padding: 10pt;
+  text-align: center;
+  background-color: #d4ecdd;
+  color: #122132;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-container {
+  font-weight: 500;
+  display: flex;
+}
