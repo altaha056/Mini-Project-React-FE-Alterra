@@ -1,7 +1,10 @@
+import "./dotd.css";
 function Dotd() {
   return (
     <>
-      <h1>ini Dotd</h1>
+      <div className="dotd-title">
+        <h1>Design of This Day</h1>
+      </div>
     </>
   );
 }

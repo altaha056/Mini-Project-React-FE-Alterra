@@ -1,0 +1,78 @@
+.login-header {
+  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d584ff127800375.614992182c31b.jpg);
+  width: 100%;
+  object-fit: cover;
+  height: 120pt;
+  border-radius: 13pt;
+  display: flex;
+  top: 0;
+}
+
+.login-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-title h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 28pt;
+  margin-top: 40pt;
+  margin-bottom: 40pt;
+}
+.login-container {
+  text-align: center;
+  max-height: 380pt;
+  min-height: 380pt;
+  max-width: 480pt;
+  min-width: 480pt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50pt;
+  margin-bottom: 50pt;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15pt;
+  border: 2pt solid #e5e5e5;
+}
+
+.form-container {
+  display: block;
+}
+.login-button {
+  width: 300pt;
+  height: 40pt;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15pt;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt;
+  color: white;
+  background-color: #122132;
+  cursor: pointer;
+  line-height: 0;
+  font-weight: 600;
+  margin-bottom: 10pt;
+  border: none;
+}
+
+.register-button {
+  border: none;
+  color: #122132;
+  background-color: white;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-input {
+  border-bottom: 1px solid #122132;
+}

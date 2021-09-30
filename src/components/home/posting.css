@@ -1,0 +1,142 @@
+.outer-container {
+  max-height: 380pt;
+  min-height: 380pt;
+  max-width: 720pt;
+  min-width: 720pt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50pt;
+  margin-bottom: 50pt;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15pt;
+  border: 2pt solid #e5e5e5;
+  display: flex;
+}
+
+.img-posting {
+  max-height: 380pt;
+  min-height: 380pt;
+  max-width: 420pt;
+  min-width: 420pt;
+}
+.img-posting img {
+  object-fit: cover;
+  min-width: 420pt;
+  max-width: 420pt;
+  min-height: 380pt;
+  max-height: 380pt;
+  border-radius: 13pt;
+}
+
+.desc-posting {
+  min-width: 260pt;
+  max-width: 260pt;
+  padding-left: 20pt;
+  padding-right: 20pt;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  color: #122132;
+}
+
+.desc-posting p {
+  font-size: 12pt;
+  line-height: 12pt;
+}
+.desc-posting p span {
+  font-weight: 600;
+  margin-right: 7pt;
+}
+.desc-posting .title {
+  font-weight: 800;
+}
+
+.detailed-container {
+  display: flex;
+  margin-bottom: 10pt;
+  margin-top: 5pt;
+  justify-content: space-between;
+}
+
+.detailed-group {
+  display: flex;
+}
+.detailed-group .comment {
+  margin-left: 30pt;
+}
+
+.timestamp p {
+  text-align: left;
+}
+
+.icon {
+  width: 20pt;
+  margin-right: 5pt;
+}
+
+.form-add-comment {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #8f8f8f;
+  width: 260pt;
+  padding-bottom: 5pt;
+  padding-top: 10pt;
+  margin-bottom: 25pt;
+}
+.add-comment-button {
+  border: none;
+  color: #122132;
+  background-color: white;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.add-comment-input {
+  font-size: 12pt;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  width: 80%;
+  text-decoration: none;
+}
+
+.add-comment-input:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #8f8f8f;
+}
+
+.box-comments {
+  overflow: auto;
+  max-height: 200pt;
+  min-height: 200pt;
+  width: 260pt;
+}
+.box-comments p {
+  font-size: 12pt;
+}
+
+.box-comments::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid #8f8f8f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8f8f8f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #122132;
+}

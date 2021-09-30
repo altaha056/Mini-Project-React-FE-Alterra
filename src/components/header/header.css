@@ -9,30 +9,42 @@
 
 .header-title {
   padding: 10pt;
+  color: white;
+  text-decoration: none;
   font-style: italic;
   font-weight: 600;
   background-color: #122132;
   font-size: 16pt;
   padding-left: 50pt;
-  color: white;
 }
 
 .header a {
   font-size: 14pt;
   padding: 20pt;
+  color: white;
+  text-decoration: none;
 }
 
 .header-login {
   width: 10%;
+  min-width: 120pt;
   font-size: 14pt;
   padding: 10pt;
+  font-weight: 600;
   text-align: center;
   background-color: #d4ecdd;
   color: #122132;
   font-family: "Montserrat", sans-serif;
 }
 
+.header-login a {
+  color: #122132;
+  text-decoration: none;
+}
+
 .header-container {
   font-weight: 500;
   display: flex;
+  position: sticky;
+  top: 0;
 }
