@@ -1,14 +1,14 @@
-import "./login.css";
+import "./register.css";
 import Profile from "../profile/profile";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Register() {
   return (
     <>
-      <div className="login-container">
-        <div className="login-header">
+      <div className="reg-container">
+        <div className="reg-header">
           <div className="login-title">
-            <h1>Join The Club</h1>
+            <h1>Register</h1>
           </div>
         </div>
         <div className="form-container">
@@ -18,16 +18,24 @@ function Login() {
               <input type="text" />
             </div>
             <div className="login-input">
+              <p>email</p>
+              <input type="email" />
+            </div>
+            <div className="login-input">
               <p>password</p>
               <input type="password" />
             </div>
+            <div className="login-input">
+              <p>retype password</p>
+              <input type="password" />
+            </div>
             <button className="login-button">
-              <p>Login</p>
+              <p>Register</p>
             </button>
             <br />
-            <Link to="/register">
+            <Link to="/login">
               <button className="register-button">
-                <p>Register</p>
+                <p>Login</p>
               </button>
             </Link>
           </form>
@@ -36,4 +44,4 @@ function Login() {
     </>
   );
 }
-export default Login;
+export default Register;

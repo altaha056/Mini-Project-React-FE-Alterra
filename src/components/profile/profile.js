@@ -2,13 +2,27 @@ import "./profile.css";
 import { ReactComponent as Heart } from "../icons/heart.svg";
 import { ReactComponent as HeartFilled } from "../icons/heart-filled.svg";
 import { ReactComponent as Comments } from "../icons/comments.svg";
+import { ReactComponent as Delete } from "../icons/delete.svg";
 function Profile() {
   return (
     <>
+      <div className="header-container">
+        <div className="header-user-container">
+          <img src="https://i.pinimg.com/564x/a6/38/a8/a638a83fadf0a53368153fdccb7e23cf.jpg" />
+          <div className="username">
+            <p className="name">Altaha</p>
+            <p className="logout">Logout</p>
+          </div>
+          <div className="post">
+            <button>Post+</button>
+          </div>
+        </div>
+      </div>
       <div className="outer-container">
         <div className="img-posting">
           <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c620e987585713.5dbc6ee3de0c0.png" />
         </div>
+
         <div className="desc-posting">
           <h3>Together with Lovely One</h3>
           <p>
@@ -18,8 +32,9 @@ function Profile() {
             <div className="detailed-group">
               <Heart className="icon" />
               <p>34</p>
-              <Comments className="icon comment" />
+              <Comments className="icon space" />
               <p>34</p>
+              <Delete className="icon space" />
             </div>
 
             <div className="timestamp">

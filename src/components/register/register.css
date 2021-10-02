@@ -1,5 +1,5 @@
-.login-header {
-  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d584ff127800375.614992182c31b.jpg);
+.reg-header {
+  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/989c4c109973011.5fe0a08622879.jpg);
   width: 100%;
   object-fit: cover;
   height: 120pt;
@@ -24,9 +24,8 @@
   margin-top: 40pt;
   margin-bottom: 40pt;
 }
-.login-container {
+.reg-container {
   text-align: center;
-  max-height: 380pt;
   min-height: 380pt;
   max-width: 480pt;
   min-width: 480pt;
@@ -37,6 +36,7 @@
   background-color: rgb(255, 255, 255);
   border-radius: 15pt;
   border: 2pt solid #e5e5e5;
+  padding-bottom: 20pt;
 }
 
 .form-container {
@@ -73,7 +73,6 @@
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
 }
-
 
 .form-input {
   border-bottom: 1px solid #122132;
