@@ -38,9 +38,14 @@
   color: #122132;
 }
 
+.desc-posting .edit {
+  color: #2b90bc;
+  font-weight: 500;
+}
 .desc-posting p {
   font-size: 12pt;
   line-height: 12pt;
+  font-weight: 600pt;
 }
 .desc-posting p span {
   font-weight: 600;
@@ -140,36 +145,46 @@
   background: #122132;
 }
 
-.header-container {
-  width: 100%;
-}
-
-.header-post-container{
-  
-}
-
 .header-user-container {
   display: flex;
-  margin-top: 20pt;
-  width: 50%;
+  margin: 20pt;
+  width: 100%;
   align-content: center;
+  justify-content: center;
+}
+
+.header-identity-container {
+  width: 40%;
+  display: flex;
   justify-content: end;
 }
 
 .header-user-container .post {
   margin-left: 20pt;
-  align-content: center;
-  justify-content: center;
   margin-top: auto;
   margin-bottom: auto;
 }
 
+.header-post-container {
+  width: 60%;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20pt;
+}
+
+.header-post-container .choose-img {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18pt;
+  color: #2b90bc;
+  font-weight: 500;
+  line-height: 0pt;
+  cursor: pointer;
+}
 .header-user-container .post button {
   color: white;
   border: none;
   font-family: "Montserrat", sans-serif;
-  align-content: center;
-  justify-content: center;
   font-size: 18pt;
   font-weight: 500;
   text-align: center;
@@ -183,8 +198,6 @@
 }
 .header-user-container .username {
   margin-left: 20pt;
-  align-content: center;
-  justify-content: center;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -210,3 +223,55 @@
   border-radius: 100pt;
   object-fit: cover;
 }
+
+/* post */
+
+.form-add-post {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #8f8f8f;
+  width: 320pt;
+  padding-bottom: 5pt;
+  padding-top: 10pt;
+  margin-bottom: 25pt;
+}
+.add-post-button {
+  border: none;
+  color: #122132;
+  background-color: white;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cancel-post {
+  border: none;
+  color: rgb(216, 0, 0);
+  background-color: white;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+.add-post-input {
+  font-size: 12pt;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  width: 100%;
+  text-decoration: none;
+}
+
+.add-post-input:focus {
+  outline: none;
+}
+
+/* post */

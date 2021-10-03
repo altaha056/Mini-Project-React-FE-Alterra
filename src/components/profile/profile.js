@@ -3,18 +3,80 @@ import { ReactComponent as Heart } from "../icons/heart.svg";
 import { ReactComponent as HeartFilled } from "../icons/heart-filled.svg";
 import { ReactComponent as Comments } from "../icons/comments.svg";
 import { ReactComponent as Delete } from "../icons/delete.svg";
+import { useEffect } from "react";
+import { useState } from "react";
+
 function Profile() {
+  const [editing, setEditing] = useState(true);
+
+  const handleBukaInput = () => {
+    setEditing(false);
+  };
+  const handleTutupInput = () => {
+    setEditing(true);
+  };
+
+  let viewMode = {};
+  let editMode = {};
+
+  if (editing) {
+    viewMode.display = "none";
+  } else {
+    editMode.display = "none";
+  }
   return (
     <>
-      <div className="header-container">
-        <div className="header-user-container">
+      <div className="header-user-container">
+        <div className="header-identity-container">
           <img src="https://i.pinimg.com/564x/a6/38/a8/a638a83fadf0a53368153fdccb7e23cf.jpg" />
           <div className="username">
             <p className="name">Altaha</p>
             <p className="logout">Logout</p>
           </div>
+        </div>
+        <div className="header-post-container">
           <div className="post">
-            <button>Post+</button>
+            <button onClick={handleBukaInput} style={editMode}>
+              Post+
+            </button>
+          </div>
+          <div style={viewMode}>
+            <div className="choose-img">
+              <form className="form-add-post">
+                <button
+                  type="button"
+                  name="add-post-title"
+                  value="komentar"
+                  className="add-comment-button"
+                >
+                  Choose Image
+                </button>
+                <input
+                  className="add-post-input"
+                  type="text"
+                  placeholder="Add title"
+                  maxLength="22"
+                />
+                <br />
+                <button
+                  type="button"
+                  name="add-post-title"
+                  value="komentar"
+                  className="cancel-post"
+                  onClick={handleTutupInput}
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  name="add-post-title"
+                  value="komentar"
+                  className="add-post-button"
+                >
+                  Post
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -25,9 +87,6 @@ function Profile() {
 
         <div className="desc-posting">
           <h3>Together with Lovely One</h3>
-          <p>
-            by: <span>Fulan bin Fulana</span>
-          </p>
           <div className="detailed-container">
             <div className="detailed-group">
               <Heart className="icon" />
@@ -36,6 +95,7 @@ function Profile() {
               <p>34</p>
               <Delete className="icon space" />
             </div>
+            <p className="edit">edit</p>
 
             <div className="timestamp">
               <p>1 hour ago</p>
