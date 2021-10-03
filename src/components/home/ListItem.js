@@ -1,13 +1,13 @@
 const ListItem = (props) => {
-  const { img, owner_id, title } = props.data;
+  const { img, username, title } = props.data;
   return (
-    <tbody>
+    <>
       <tr>
         <td>{img}</td>
-        <td>{owner_id}</td>
+        <td>{username}</td>
         <td>{title}</td>
       </tr>
-    </tbody>
+    </>
   );
 };
 

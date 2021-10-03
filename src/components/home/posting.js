@@ -2,7 +2,7 @@ import "./posting.css";
 import { ReactComponent as Heart } from "../icons/heart.svg";
 import { ReactComponent as HeartFilled } from "../icons/heart-filled.svg";
 import { ReactComponent as Comments } from "../icons/comments.svg";
-
+import ListItem from "./ListItem";
 function Posting() {
   return (
     <>

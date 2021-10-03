@@ -10,20 +10,16 @@ const ListPost = () => {
   });
 
   if (error) {
-    return <h3>Terjadi kesalahan</h3>;
+    return <h3>error occured</h3>;
   }
   if (loading) {
-    return <h3>Sedang memuat</h3>;
+    return <h3>load data</h3>;
   }
   return (
     <>
-      <div>
-        <table>
-          {antonio_post.map((item) => (
-            <ListItem key={item.id} id={item.id} data={item} />
-          ))}
-        </table>
-      </div>
+      {antonio_post.map((item) => (
+        <ListItem key={item.id} id={item.id} data={item} />
+      ))}
     </>
   );
 };
