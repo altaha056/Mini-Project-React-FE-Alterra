@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import useGetPost from "../../crud/useGetPost";
 import ListItem from "./ListItem";
-
+import Posting from "./posting";
 const ListPost = () => {
   const { antonio_post, loading, error, subscribePost } = useGetPost();
 

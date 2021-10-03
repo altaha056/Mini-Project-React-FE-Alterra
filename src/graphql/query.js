@@ -1,4 +1,4 @@
-import {gql} from "@apollo/client";
+import { gql } from "@apollo/client";
 
 export const getPost = gql`
   query MyQuery {
@@ -7,6 +7,9 @@ export const getPost = gql`
       title
       user_owner {
         username
+      }
+      comments {
+        comment
       }
     }
   }

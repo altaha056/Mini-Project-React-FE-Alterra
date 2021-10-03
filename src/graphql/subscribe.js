@@ -8,6 +8,9 @@ export const SubscriptionPost = gql`
       user_owner {
         username
       }
+      comments {
+        comment
+      }
     }
   }
 `;
