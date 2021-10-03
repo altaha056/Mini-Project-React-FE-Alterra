@@ -15,7 +15,7 @@ export default function useGetPost() {
     });
   };
   return {
-    postingan: data ? data.postingan : [],
+    antonio_post: data ? data.antonio_post : [],
     loading,
     error,
     subscribePost,

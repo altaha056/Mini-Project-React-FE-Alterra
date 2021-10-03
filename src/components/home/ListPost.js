@@ -3,7 +3,7 @@ import useGetPost from "../../crud/useGetPost";
 import ListItem from "./ListItem";
 
 const ListPost = () => {
-  const { postingan, loading, error, subscribePost } = useGetPost();
+  const { antonio_post, loading, error, subscribePost } = useGetPost();
 
   useEffect(() => {
     subscribePost();
@@ -19,7 +19,7 @@ const ListPost = () => {
     <>
       <div>
         <table>
-          {postingan.map((item) => (
+          {antonio_post.map((item) => (
             <ListItem key={item.id} id={item.id} data={item} />
           ))}
         </table>
