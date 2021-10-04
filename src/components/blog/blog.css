@@ -1,13 +1,20 @@
+.container-blog {
+  left: auto;
+  right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .blog-container {
-  margin-left: auto;
-  margin-right: auto;
-  height: 310pt;
-  min-width: 700pt;
-  max-width: 700pt;
+  display: block;
+  min-height: 400pt;
+  max-height: 1200pt;
+  width: 300pt;
   border-radius: 15pt;
   border: 2pt solid #e5e5e5;
   margin-bottom: 40pt;
-  margin-top: 40pt;
+  margin-top: 20pt;
 }
 
 .blog-title h1 {
@@ -22,10 +29,8 @@
 .blog-image img {
   margin-left: auto;
   margin-right: auto;
-  max-height: 200pt;
-  min-height: 200pt;
-  min-width: 700pt;
-  max-width: 700pt;
+  height: 300pt;
+  width: 300pt;
   object-fit: cover;
   border-radius: 13pt;
 }
@@ -33,11 +38,7 @@
 .blog-desc {
   font-family: "Montserrat", sans-serif;
   color: #122132;
-  margin-top: 15pt;
-  max-width: 500pt;
-  margin-left: 20pt;
-  margin-right: auto;
-  margin-bottom: 100pt;
+  margin: 20pt;
 }
 .blog-desc .blog-sub-title {
   font-size: 18pt;
@@ -52,6 +53,6 @@
   font-size: 12pt;
   font-weight: 400;
   margin-top: 15pt;
-
-  color: #bbbbbb;
+  line-height: 17pt;
+  color: #92a2b4;
 }

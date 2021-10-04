@@ -16,7 +16,7 @@ const ListItem = (props) => {
     <>
       <div className="outer-container">
         <div className="img-posting">
-          <img src={img} />
+          <img src={img} alt="picture by user" />
         </div>
         <div className="desc-posting">
           <h3>{title} </h3>

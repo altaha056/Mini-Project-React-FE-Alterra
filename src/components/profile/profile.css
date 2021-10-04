@@ -148,7 +148,7 @@
 .header-user-container {
   display: flex;
   margin: 20pt;
-  width: 100%;
+  width: 90%;
   align-content: center;
   justify-content: center;
 }
@@ -166,7 +166,7 @@
 }
 
 .header-post-container {
-  width: 60%;
+  width: 50%;
   justify-content: center;
   margin-top: auto;
   margin-bottom: auto;

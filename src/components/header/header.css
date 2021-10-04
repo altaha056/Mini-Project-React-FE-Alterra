@@ -45,6 +45,5 @@
 .header-container {
   font-weight: 500;
   display: flex;
-  position: sticky;
   top: 0;
 }
