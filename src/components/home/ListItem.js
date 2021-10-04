@@ -8,6 +8,7 @@ const ListItem = (props) => {
     img,
     user_owner: { username },
     title,
+    like_count,
     comments: { comment },
   } = props.data;
 
@@ -25,7 +26,7 @@ const ListItem = (props) => {
           <div className="detailed-container">
             <div className="detailed-group">
               <Heart className="icon" />
-              <p>34</p>
+              <p>{like_count}</p>
               <Comments className="icon comment" />
               <p>34</p>
             </div>

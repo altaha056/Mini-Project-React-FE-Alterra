@@ -5,6 +5,7 @@ export const SubscriptionPost = gql`
     antonio_post {
       img
       title
+      like_count
       user_owner {
         username
       }
