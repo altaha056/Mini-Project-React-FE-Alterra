@@ -32,7 +32,7 @@
   min-width: 480pt;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50pt;
+  margin-top: 70pt;
   margin-bottom: 50pt;
   background-color: rgb(255, 255, 255);
   border-radius: 15pt;
@@ -73,7 +73,6 @@
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
 }
-
 
 .form-input {
   border-bottom: 1px solid #122132;

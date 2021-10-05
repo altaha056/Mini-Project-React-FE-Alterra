@@ -1,0 +1,14 @@
+.container-loading {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.container-loading h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32pt;
+  color: #122132;
+  padding: 20pt;
+}

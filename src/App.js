@@ -1,5 +1,4 @@
 import { Switch, Route } from "react-router-dom";
-
 import About from "./components/about/about";
 import Blog from "./components/blog/blog";
 import Dotd from "./components/dotd/dotd";

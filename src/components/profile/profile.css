@@ -148,6 +148,7 @@
 .header-user-container {
   display: flex;
   margin: 20pt;
+  margin-top: 70pt;
   width: 90%;
   align-content: center;
   justify-content: center;

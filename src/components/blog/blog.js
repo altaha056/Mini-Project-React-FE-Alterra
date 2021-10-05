@@ -7,7 +7,6 @@ function Blog() {
       <div className="blog-title">
         <h1>Blog</h1>
       </div>
-
       <div className="container-blog">
         <NewsList />
       </div>

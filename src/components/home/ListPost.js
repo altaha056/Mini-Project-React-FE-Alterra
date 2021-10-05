@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import useGetPost from "../../crud/useGetPost";
 import ListItem from "./ListItem";
 import Posting from "./posting";
+import LoadingAnimation from "../loadinganimation/LoadingAnimation";
+
 const ListPost = () => {
   const { antonio_post, loading, error, subscribePost } = useGetPost();
 
@@ -10,10 +12,10 @@ const ListPost = () => {
   });
 
   if (error) {
-    return <h3>error occured</h3>;
+    return <h2>error occured</h2>;
   }
   if (loading) {
-    return <h3>load data</h3>;
+    return <LoadingAnimation />;
   }
   return (
     <>
