@@ -2,6 +2,7 @@ import "./profile.css";
 import useInsertPost from "../../crud/useInsertPost";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { responsePathAsArray } from "graphql";
 function PostInput() {
   const { insertPost, loadingInsert } = useInsertPost();
 
@@ -16,6 +17,8 @@ function PostInput() {
       setTitle(e.target.value);
     }
   };
+
+  const user_id = localStorage.getItem("user_id");
 
   const addPost = (e) => {
     insertPost({
@@ -70,65 +73,67 @@ function PostInput() {
   };
   return (
     <>
-      <div className="header-user-container">
-        <div className="header-identity-container">
-          <img src="https://i.pinimg.com/564x/a6/38/a8/a638a83fadf0a53368153fdccb7e23cf.jpg" />
-          <div className="username">
-            <p className="name">Altaha</p>
-            <Link to={window.location.pathname} onClick={onSignOutHandler}>
-              <p className="logout">Logout</p>
-            </Link>
+      {user_id !== null && (
+        <div className="header-user-container">
+          <div className="header-identity-container">
+            <img src="https://i.pinimg.com/564x/a6/38/a8/a638a83fadf0a53368153fdccb7e23cf.jpg" />
+            <div className="username">
+              <p className="name">Altaha</p>
+              <Link to="/" onClick={onSignOutHandler}>
+                <p className="logout">Logout</p>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="header-post-container">
-          <div className="post">
-            <button onClick={handleBukaInput} style={editMode}>
-              Post+
-            </button>
-          </div>
-          <div style={viewMode}>
-            <div className="choose-img">
-              <form className="form-add-post">
-                <button
-                  type="button"
-                  name="add-post-title"
-                  value="komentar"
-                  className="add-comment-button"
-                >
-                  Choose Image
-                </button>
-                <input
-                  className="add-post-input"
-                  type="text"
-                  placeholder="Add title"
-                  maxLength="22"
-                  name={title}
-                  onChange={onChangeTitle}
-                />
-                <br />
-                <button
-                  type="button"
-                  name="add-post-title"
-                  value="komentar"
-                  className="cancel-post"
-                  onClick={handleTutupInput}
-                >
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  name="add-post-title"
-                  value="komentar"
-                  className="add-post-button"
-                  onClick={handleSubmit}
-                >
-                  Post
-                </button>
-              </form>
+          <div className="header-post-container">
+            <div className="post">
+              <button onClick={handleBukaInput} style={editMode}>
+                Post+
+              </button>
+            </div>
+            <div style={viewMode}>
+              <div className="choose-img">
+                <form className="form-add-post">
+                  <button
+                    type="button"
+                    name="add-post-title"
+                    value="komentar"
+                    className="add-comment-button"
+                  >
+                    Choose Image
+                  </button>
+                  <input
+                    className="add-post-input"
+                    type="text"
+                    placeholder="Add title"
+                    maxLength="22"
+                    name={title}
+                    onChange={onChangeTitle}
+                  />
+                  <br />
+                  <button
+                    type="button"
+                    name="add-post-title"
+                    value="komentar"
+                    className="cancel-post"
+                    onClick={handleTutupInput}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    name="add-post-title"
+                    value="komentar"
+                    className="add-post-button"
+                    onClick={handleSubmit}
+                  >
+                    Post
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

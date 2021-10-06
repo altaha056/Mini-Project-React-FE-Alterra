@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 function Header() {
   const user_id = localStorage.getItem("user_id");
-  const username = localStorage.getItem("username");
   return (
     <>
       <div className="header-container">
@@ -25,14 +24,10 @@ function Header() {
           </Link>
         </div>
         <div className="header-login">
-          {user_id === null ? (
-            <Link to="/login">
-              <a>login</a>
-            </Link>
+          {user_id !== null ? (
+            <Link to="/profile">profile</Link>
           ) : (
-            <Link to="/profile">
-              <a>profile</a>
-            </Link>
+            <Link to="/login">login</Link>
           )}
         </div>
       </div>

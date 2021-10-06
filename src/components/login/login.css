@@ -26,7 +26,7 @@
 }
 .login-container {
   text-align: center;
-  max-height: 380pt;
+  max-height: 580pt;
   min-height: 380pt;
   max-width: 480pt;
   min-width: 480pt;
@@ -37,6 +37,7 @@
   background-color: rgb(255, 255, 255);
   border-radius: 15pt;
   border: 2pt solid #e5e5e5;
+  padding-bottom: 20pt;
 }
 
 .form-container {
@@ -86,6 +87,14 @@
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
+
+.error {
+  color: red;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 20pt;
+}
+
 .login-input p {
   text-align: left;
   font-weight: 600;

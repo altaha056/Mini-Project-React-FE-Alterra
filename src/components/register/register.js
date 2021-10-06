@@ -35,10 +35,10 @@ function Register() {
 
   useEffect(() => {
     if (data?.insert_antonio_user_one === null && !loadingRegister) {
-      setErrorRegister("username is existed");
+      setErrorRegister("already existed");
     } else if (data?.insert_antonio_user_one.id) {
       localStorage.setItem("user_id", data?.insert_antonio_user_one.id);
-      history.push(`/`);
+      history.push("/profile");
     }
   }, [data, history, loadingRegister]);
 
@@ -56,8 +56,13 @@ function Register() {
         </div>
         <div className="form-container">
           <form onSubmit={onRegistHandler}>
-            <div className="login-input">
-              <p>username</p>
+            <div className="login-input flex">
+              <p>
+                username
+                {errorRegister !== "" && (
+                  <p className="error">{errorRegister}</p>
+                )}
+              </p>
               <input type="text" ref={userNameEl} required />
             </div>
             <div className="login-input">
@@ -78,7 +83,7 @@ function Register() {
             <br />
             <Link to="/login">
               <button className="register-button">
-                <p>Login</p>
+                <p>Already have account? Login</p>
               </button>
             </Link>
           </form>
