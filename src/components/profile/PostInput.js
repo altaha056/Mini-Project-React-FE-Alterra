@@ -1,7 +1,7 @@
 import "./profile.css";
 import useInsertPost from "../../crud/useInsertPost";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 function PostInput() {
   const { insertPost, loadingInsert } = useInsertPost();
 
@@ -64,6 +64,10 @@ function PostInput() {
   } else {
     editMode.display = "none";
   }
+
+  const onSignOutHandler = () => {
+    localStorage.removeItem("user_id");
+  };
   return (
     <>
       <div className="header-user-container">
@@ -71,7 +75,9 @@ function PostInput() {
           <img src="https://i.pinimg.com/564x/a6/38/a8/a638a83fadf0a53368153fdccb7e23cf.jpg" />
           <div className="username">
             <p className="name">Altaha</p>
-            <p className="logout">Logout</p>
+            <Link to={window.location.pathname} onClick={onSignOutHandler}>
+              <p className="logout">Logout</p>
+            </Link>
           </div>
         </div>
         <div className="header-post-container">

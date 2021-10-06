@@ -50,10 +50,27 @@ export const AddComment = gql`
     }
   }
 `;
-export const SignUp=gql``;
+export const SignUp = gql`
+  mutation signUp($object: antonio_user_insert_input = {}) {
+    insert_antonio_user_one(
+      object: $object
+      on_conflict: { constraint: user_username_key }
+    ) {
+      id
+    }
+  }
+`;
 
 
-export const SignIn = gql``;
+export const SignIn = gql`
+  query signIn($username: String!, $password: String!) {
+    antonio_user(
+      where: { username: { _eq: $username }, password: { _eq: $password } }
+    ) {
+      id
+    }
+  }
+`;
 
 
 
