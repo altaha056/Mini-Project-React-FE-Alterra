@@ -3,18 +3,26 @@ import useInsertPost from "../../crud/useInsertPost";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { responsePathAsArray } from "graphql";
+import { useHistory } from "react-router";
+
 function PostInput() {
   const { insertPost, loadingInsert } = useInsertPost();
 
   const [title, setTitle] = useState("");
   const [img, setImg] = useState("tes");
   const [like_count, setLikeCount] = useState(0);
-  const [owner_id, setOwnerId] = useState(4);
+  const [owner_id, setOwnerId] = useState();
   const [editing, setEditing] = useState(true);
-
+  const history = useHistory();
   const onChangeTitle = (e) => {
     if (e.target) {
       setTitle(e.target.value);
+    }
+  };
+
+  const onChangeImage = (e) => {
+    if (e.target) {
+      setImg(e.target.value);
     }
   };
 
@@ -76,9 +84,9 @@ function PostInput() {
       {user_id !== null && (
         <div className="header-user-container">
           <div className="header-identity-container">
-            <img src="https://i.pinimg.com/564x/a6/38/a8/a638a83fadf0a53368153fdccb7e23cf.jpg" />
+            <img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol/tray_large.png?4776c1769a678e6d5e003530cf28e31c" />
             <div className="username">
-              <p className="name">Altaha</p>
+              <p className="name">Hello</p>
               <Link to="/" onClick={onSignOutHandler}>
                 <p className="logout">Logout</p>
               </Link>
@@ -94,10 +102,11 @@ function PostInput() {
               <div className="choose-img">
                 <form className="form-add-post">
                   <button
-                    type="button"
-                    name="add-post-title"
+                    type="file"
+                    name={img}
                     value="komentar"
                     className="add-comment-button"
+                    onChange={onChangeImage}
                   >
                     Choose Image
                   </button>

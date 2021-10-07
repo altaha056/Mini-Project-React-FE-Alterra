@@ -3,6 +3,7 @@ import { gql } from "graphql-tag";
 export const SubscriptionPost = gql`
   subscription MySubscription {
     antonio_post {
+      id
       img
       title
       like_count
@@ -10,6 +11,40 @@ export const SubscriptionPost = gql`
         username
       }
       comments {
+        comment
+      }
+    }
+  }
+`;
+
+export const GET_POST_BY_PROFILE = gql`
+  subscription GetAllPost($user_id: Int!) {
+    antonio_post(
+      order_by: { updated_at: desc }
+      where: { user_id: { _eq: $user_id } }
+    ) {
+      id
+      img
+      title
+      updated_at
+      user_owner {
+        id
+        username
+      }
+      likes_aggregate {
+        aggregate {
+          count(columns: id)
+        }
+      }
+      comments_aggregate {
+        aggregate {
+          count(columns: id)
+        }
+      }
+      comments {
+        user {
+          username
+        }
         comment
       }
     }
