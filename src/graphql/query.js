@@ -37,6 +37,12 @@ export const GET_ALL_POST = gql`
           count(columns: id)
         }
       }
+      comments {
+        user {
+          username
+        }
+        comment
+      }
     }
   }
 `;

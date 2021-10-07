@@ -24,6 +24,9 @@ const PostLists = () => {
           user_username={post.user_owner.username}
           totalLikes={post.likes_aggregate.aggregate.count}
           totalComments={post.comments_aggregate.aggregate.count}
+          comments={post.comments}
+          // commentsList={post.comments.comments}
+          // commentsOwner={post.comments.user.username}
         />
       ))}
     </>
