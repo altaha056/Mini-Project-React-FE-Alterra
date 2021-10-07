@@ -3,11 +3,11 @@ import { GET_POST_BY_PROFILE } from "../graphql/subscribe";
 import { UpdatePost } from "../graphql/mutation";
 
 export default function useUpdatePost() {
-  const [updateUser, { loading: loadingUpdate }] = useMutation(UpdatePost, {
+  const [updatePost, { loading: loadingUpdate }] = useMutation(UpdatePost, {
     refetchQueries: [GET_POST_BY_PROFILE],
   });
   return {
-    updateUser,
+    updatePost,
     loadingUpdate,
   };
 }

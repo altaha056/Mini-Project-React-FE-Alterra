@@ -18,7 +18,7 @@ function UserPostList() {
   const { updatePost, loadingUpdate } = useUpdatePost();
 
   const editPost = async (idx) => {
-    const item = data.find((v) => v.id === idx);
+    const item = data.antonio_post.find((v) => v.id === idx);
     const changeTitle = prompt("enter title", item.title);
     if (changeTitle) {
       updatePost({
