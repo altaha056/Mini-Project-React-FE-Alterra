@@ -122,7 +122,7 @@ function PostInput() {
                     className="add-post-input"
                     type="file"
                     placeholder="Add image"
-                    name={Image}
+                    name={img}
                     accept="image/*"
                     onChange={onChangeImage}
                   />

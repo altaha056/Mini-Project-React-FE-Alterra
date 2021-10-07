@@ -31,6 +31,10 @@ export const UserPostItem = ({
 
       <div className="desc-posting">
         <h3>{title}</h3>
+
+        <div className="timestamp">
+          <p>{moment(updated_at).format("MMM D YY, h:mm:ss a")}</p>
+        </div>
         <div className="detailed-container">
           <div className="detailed-group">
             <Heart className="icon" />
@@ -44,10 +48,6 @@ export const UserPostItem = ({
           <p className="edit" onClick={updatePost}>
             edit
           </p>
-
-          <div className="timestamp">
-            <p>{moment(updated_at).format("MMM D YY, h:mm:ss a")}</p>
-          </div>
         </div>
 
         <div className="box-comments">
