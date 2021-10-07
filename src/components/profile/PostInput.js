@@ -1,6 +1,6 @@
 import "./profile.css";
 import useInsertPost from "../../crud/useInsertPost";
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { responsePathAsArray } from "graphql";
 import { useHistory } from "react-router";
@@ -20,11 +20,18 @@ function PostInput() {
     }
   };
 
-  const onChangeImage = (e) => {
-    if (e.target) {
-      setImg(e.target.value);
-    }
-  };
+  const onChangeImage = useCallback((event) => {
+    var file = event.target.files[0];
+    console.log(file);
+    var reader = new FileReader();
+    reader.onload = (e) => {
+      setImg(e.target.result);
+    };
+    reader.onerror = (err) => {
+      console.log(err);
+    };
+    reader.readAsDataURL(file);
+  }, []);
 
   const user_id = localStorage.getItem("user_id");
 
@@ -113,9 +120,10 @@ function PostInput() {
 
                   <input
                     className="add-post-input"
-                    type="text"
+                    type="file"
                     placeholder="Add image"
                     name={Image}
+                    accept="image/*"
                     onChange={onChangeImage}
                   />
                   <input
