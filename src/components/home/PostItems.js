@@ -3,7 +3,7 @@ import { ReactComponent as Heart } from "../icons/heart.svg";
 import { ReactComponent as HeartFilled } from "../icons/heart-filled.svg";
 import { ReactComponent as Comments } from "../icons/comments.svg";
 import moment from "moment";
-import { Comment } from "../comments/Comment";
+import { Comment, InsertComment } from "../comments/InsertComment";
 
 const PostItems = ({
   post_id,
@@ -14,8 +14,6 @@ const PostItems = ({
   user_username,
   totalLikes,
   totalComments,
-  commentsOwner,
-  commentsList,
   comments,
 }) => {
   return (
@@ -49,22 +47,7 @@ const PostItems = ({
             </p>
           ))}
         </div>
-
-        <form className="form-add-comment">
-          <input
-            className="add-comment-input"
-            type="text"
-            placeholder="Add comment"
-          />
-          <button
-            type="button"
-            name="add-comment"
-            value="komentar"
-            className="add-comment-button"
-          >
-            Enter
-          </button>
-        </form>
+        <InsertComment post_id={post_id} />
       </div>
     </div>
   );

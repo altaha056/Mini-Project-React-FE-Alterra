@@ -17,7 +17,7 @@ export const getPost = gql`
 `;
 
 export const GET_ALL_POST = gql`
-  query GetAllPost {
+  subscription GetAllPost {
     antonio_post(order_by: { updated_at: desc }) {
       id
       img

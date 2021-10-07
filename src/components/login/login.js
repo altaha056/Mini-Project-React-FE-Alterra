@@ -27,7 +27,7 @@ function Login() {
   useEffect(() => {
     console.log(dataLogIn);
     if (dataLogIn?.antonio_user.length > 0 && !loadingLogIn) {
-      localStorage.setItem("user_id", dataLogIn?.antonio_user.id);
+      localStorage.setItem("user_id", dataLogIn?.antonio_user[0].id);
       history.push("/profile");
     } else if (dataLogIn?.antonio_user.length === 0) {
       setErrorLogin("username or password is invalid");

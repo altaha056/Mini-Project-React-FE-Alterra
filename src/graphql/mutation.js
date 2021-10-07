@@ -43,6 +43,7 @@ export const DeleteLike = gql`
     }
   }
 `;
+
 export const AddComment = gql`
   mutation addComment($object: antonio_comment_insert_input!) {
     insert_antonio_comment_one(object: $object) {
@@ -50,6 +51,7 @@ export const AddComment = gql`
     }
   }
 `;
+
 export const SignUp = gql`
   mutation signUp($object: antonio_user_insert_input = {}) {
     insert_antonio_user_one(
