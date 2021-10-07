@@ -34,7 +34,7 @@ function PostInput() {
         object: {
           title: title,
           img: img,
-          owner_id: owner_id,
+          user_id: user_id,
           like_count: like_count,
         },
       },
@@ -46,7 +46,7 @@ function PostInput() {
       const newData = {
         title: title,
         img: img,
-        owner_id: owner_id,
+        user_id: user_id,
         like_count: like_count,
       };
 
@@ -101,7 +101,7 @@ function PostInput() {
             <div style={viewMode}>
               <div className="choose-img">
                 <form className="form-add-post">
-                  <button
+                  {/* <button
                     type="file"
                     name={img}
                     value="komentar"
@@ -109,7 +109,15 @@ function PostInput() {
                     onChange={onChangeImage}
                   >
                     Choose Image
-                  </button>
+                  </button> */}
+
+                  <input
+                    className="add-post-input"
+                    type="text"
+                    placeholder="Add image"
+                    name={Image}
+                    onChange={onChangeImage}
+                  />
                   <input
                     className="add-post-input"
                     type="text"
