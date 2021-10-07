@@ -25,4 +25,5 @@ const ListPost = () => {
     </>
   );
 };
+
 export default ListPost;

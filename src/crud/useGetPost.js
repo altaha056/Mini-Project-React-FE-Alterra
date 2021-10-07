@@ -5,7 +5,7 @@ import { GET_POST_BY_ID } from "../graphql/subscribe";
 import { GET_ALL_POST } from "../graphql/query";
 
 export default function useGetPost() {
-  const { data, loading, error, subscribeToMore } = useQuery(getPost);
+  const { data, loading, error, subscribeToMore } = useQuery(GET_ALL_POST);
 
   const subscribePost = () => {
     subscribeToMore({

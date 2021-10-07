@@ -9,7 +9,7 @@ const ListItem = (props) => {
     user_owner: { username },
     title,
     like_count,
-    comments: { comment },
+    comment,
   } = props.data;
 
   return (
