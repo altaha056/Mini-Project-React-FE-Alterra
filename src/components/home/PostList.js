@@ -5,12 +5,15 @@ import PostItems from "./PostItems";
 
 const PostLists = () => {
   const { data, loading } = useQuery(GET_ALL_POST);
+  console.log(loading);
+  console.log(data);
+
   if (loading) {
     return <LoadingAnimation />;
   }
   return (
     <>
-      {data?.antonio_post.map((post) => {
+      {data.antonio_post.map((post) => (
         <PostItems
           key={post.id}
           post_id={post.id}
@@ -21,8 +24,8 @@ const PostLists = () => {
           user_username={post.user_owner.username}
           totalLikes={post.likes_aggregate.aggregate.count}
           totalComments={post.comments_aggregate.aggregate.count}
-        />;
-      })}
+        />
+      ))}
     </>
   );
 };

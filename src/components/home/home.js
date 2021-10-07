@@ -4,8 +4,8 @@ import PostLists from "./PostList";
 function Home() {
   return (
     <>
-      {/* <PostLists /> */}
-      <ListPost />
+      <PostLists />
+      {/* <ListPost /> */}
     </>
   );
 }
