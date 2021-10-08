@@ -1,5 +1,13 @@
 import { gql } from "@apollo/client";
 
+export const GET_USERNAME = gql`
+  query MyQuery($id: Int!) {
+    antonio_user(where: { id: { _eq: $id } }) {
+      username
+    }
+  }
+`;
+
 export const getPost = gql`
   query MyQuery {
     antonio_post {

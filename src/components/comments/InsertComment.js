@@ -28,7 +28,7 @@ export const InsertComment = ({ post_id }) => {
     const user_id = localStorage.getItem("user_id");
     const comment = commentEl.current.value;
     if (user_id === null) {
-      history.push("/login");
+      history.push("/profile");
       return;
     }
     if (comment !== "") {

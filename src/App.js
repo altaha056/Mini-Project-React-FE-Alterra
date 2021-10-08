@@ -7,6 +7,7 @@ import Home from "./components/home/home";
 import Login from "./components/login/login";
 import Register from "./components/register/register";
 import Profile from "./components/profile/profile";
+import { NotFound } from "./components/unknownpage/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
         <Route path="/profile" exact component={Profile} />
+        <Route component={NotFound} />
       </Switch>
     </>
   );

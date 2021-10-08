@@ -2,8 +2,10 @@ import "./profile.css";
 import useInsertPost from "../../crud/useInsertPost";
 import { useState, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { responsePathAsArray } from "graphql";
+import { parse, responsePathAsArray } from "graphql";
 import { useHistory } from "react-router";
+import { useQuery } from "@apollo/client";
+import { GET_USERNAME } from "../../graphql/query";
 
 function PostInput() {
   const { insertPost, loadingInsert } = useInsertPost();
@@ -34,6 +36,7 @@ function PostInput() {
   }, []);
 
   const user_id = localStorage.getItem("user_id");
+  const username = localStorage.getItem("username");
 
   const addPost = (e) => {
     insertPost({
@@ -93,7 +96,7 @@ function PostInput() {
           <div className="header-identity-container">
             <img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol/tray_large.png?4776c1769a678e6d5e003530cf28e31c" />
             <div className="username">
-              <p className="name">Hello</p>
+              <p className="name">{username}</p>
               <Link to="/" onClick={onSignOutHandler}>
                 <p className="logout">Logout</p>
               </Link>

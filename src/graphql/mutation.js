@@ -69,6 +69,7 @@ export const SignIn = gql`
       where: { username: { _eq: $username }, password: { _eq: $password } }
     ) {
       id
+      username
     }
   }
 `;
